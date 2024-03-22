@@ -1,0 +1,21 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesLogin.css", titulo:"INGRESAR"}) %>
+<main>
+    <form action="/user/login" method="POST" id="login">
+        <div class="info-personal">
+            <h3 class="titulo-seccion">INICIAR SESIÓN</h3>
+            <input type="email" name="email" id="email" placeholder="Correo Electrónico">
+            <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+        </div>
+        <div class="recordar">
+            <input type="checkbox" name="recordar" id="recordar">
+            <label for="recordar">Recordar información</label>
+        </div>
+        <div class="botones">
+            <input type="submit" value="INGRESAR">
+        </div>
+        <div class="links-extra">
+            <a href="/user/register">Crear Equipo</a>
+        </div>
+    </form>
+</main>
+<%- include('../partials/footer') %>

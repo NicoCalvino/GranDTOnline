@@ -1,0 +1,62 @@
+main{
+    width: 95%;
+    margin: auto;
+}
+
+h3.titulo-seccion{
+    font-size: 25px;
+}
+
+div.bloque-dt{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+div.bloque-dt .escudo-equipo{
+    width:40%;
+    text-align: center;
+}
+
+div.bloque-dt img{
+    width:10%;
+    height: 100%;
+    object-fit:contain;
+}
+
+div.bloque-jugadores h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+tr
+
+tr.ARQ{
+    background-color: rgba(248,203,173,1);
+    border-radius: 10px;
+}
+
+tr.DEF{
+    background-color: rgba(255,242,204,1);
+    border-radius: 10px;
+}
+
+tr.VOL{
+    background-color: rgba(217,225,242,1);
+    border-radius: 10px;
+}
+
+tr.DEL{
+    background-color: rgba(255,184,167,1);
+    border-radius: 10px;
+}
+
+tr.XXX{
+    background-color: rgb(77, 77, 77);
+    border-radius: 10px;
+    color:aliceblue
+}

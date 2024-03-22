@@ -1,0 +1,66 @@
+
+main{
+    width:80%;
+    margin:10px auto
+}
+
+.info-personal{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.info-personal .titulo-seccion{
+    width:100%;
+    font-size: 25px;
+    color:rgb(0, 0,0);
+    margin: 5px 0px; 
+    text-align: center;
+}
+
+.info-personal input{
+    width:90%;
+    margin:5px auto;
+    font-size: 18px;
+}
+
+.recordar{
+    width:90%;
+    margin:5px auto;
+}
+
+.botones{
+    width:80%;
+    margin:5px auto
+}
+
+.botones input{
+    width:100%;
+    background-color: rgb(1,139,228);
+    font-size: 20px;
+    line-height: 28px;
+    color:white;
+    border-radius: 10px;
+}
+
+/* Media Querys */
+
+
+@media(min-width:576px){
+    main{
+        width:50%;
+    }
+
+    main form{
+        border: 2px solid rgb(0, 69, 138);
+        border-radius: 15PX;
+        padding: 10px;
+    }
+}
+
+@media(min-width:769px){
+    main{
+        width:30%;
+    }
+
+}

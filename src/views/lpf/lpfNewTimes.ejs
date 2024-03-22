@@ -1,0 +1,56 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesLPFTimes.css", titulo:"HORARIOS FECHA " + nroFecha }) %>
+<main>
+    <div>
+        <h2>HORARIOS FECHA <%= nroFecha %></h2>
+        <form action="/lpf/week/<%= nroFecha %>" method="POST" id="create">
+            <div class="partidos-completo">
+                <ul class="partidos-zona">
+                    <% for (let i = 1;i<= 7;i++){ %>
+                        <li class="partido">
+                            <select class="info-partido equipo" name="local<%= i %>">
+                                <option value="">LOCAL</option>
+                                <% equiposLPF.forEach(equipo => { %>
+                                    <option value="<%= equipo.idGDT %>"><%= equipo.equipoGDT %></option>
+                                <% }) %>
+                            </select>
+                            <span>Vs.</span>
+                            <select class="info-partido equipo" name="visitante<%= i %>">
+                                <option value="">VISITANTE</option>
+                                <% equiposLPF.forEach(equipo => { %>
+                                    <option value="<%= equipo.idGDT %>"><%= equipo.equipoGDT %></option>
+                                <% }) %>
+                            </select>
+                            <input type="date" class="info-partido fecha" name="dia<%= i %>">
+                            <input type="time" class="info-partido hora"  name="hora<%= i %>">
+                        </li>
+                    <% } %>
+                </ul>
+                <ul class="partidos-zona">
+                    <% for (let i = 8;i<= 14;i++){ %>
+                        <li class="partido">
+                            <select class="info-partido equipo" name="local<%= i %>">
+                                <option value="">LOCAL</option>
+                                <% equiposLPF.forEach(equipo => { %>
+                                    <option value="<%= equipo.idGDT %>"><%= equipo.equipoGDT %></option>
+                                <% }) %>
+                            </select>
+                            <span>Vs.</span>
+                            <select class="info-partido equipo" name="visitante<%= i %>">
+                                <option value="">VISITANTE</option>
+                                <% equiposLPF.forEach(equipo => { %>
+                                    <option value="<%= equipo.idGDT %>"><%= equipo.equipoGDT %></option>
+                                <% }) %>
+                            </select>
+                            <input type="date" class="info-partido fecha" name="dia<%= i %>">
+                            <input type="time" class="info-partido hora"  name="hora<%= i %>">
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="bloque-boton">
+                <input type="submit" class="boton" value="CONFIRMAR">
+            </div>
+        </form>
+    </div>
+</main>
+<%- include('../partials/footer') %>

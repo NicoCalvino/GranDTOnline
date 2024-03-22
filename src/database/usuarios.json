@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "tipo": "DT",
+    "nombre": "Gaston",
+    "apellido": "Vernhes",
+    "equipo": "Pase al Medio",
+    "password": "$2a$10$SAhl0KR/Djj7JlximUx9UeWUjmZTRXmI/pVjf9BOGRngT2XuJgB1G",
+    "apodo": "Chas",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 2,
+    "tipo": "DT",
+    "nombre": "Juan Manuel",
+    "apellido": "Mayor",
+    "equipo": "GIN GIN GIN GIN GIN",
+    "password": "$2a$10$vAr9RoXz2r1JkRHmYUxwZe7nMWwv.oMlWQFb03dgPUUMiliCKYSG2",
+    "apodo": "Flecha",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 3,
+    "tipo": "DT",
+    "nombre": "Federico Ignacio",
+    "apellido": "Ruggieri",
+    "equipo": "Oshki FC",
+    "password": "$2a$10$mj23XH0dK3A.j/R/4CY6cOkPd6riy7iu7d2/wjbuz6MPqTpQvfE42",
+    "apodo": "Fede",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 4,
+    "tipo": "DT",
+    "nombre": "Tomas Rodolfo",
+    "apellido": "Egozcue",
+    "equipo": "Mandrake Afo",
+    "password": "$2a$10$xr3r9MxKnRWAtvQdyUhOSeM5WsMb3H60hk0z2l.dOYQG/YwfxLMcm",
+    "apodo": "Tomo",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 5,
+    "tipo": "DT",
+    "nombre": "Marto",
+    "apellido": "Perez Alonso",
+    "equipo": "ElChoriEsArgentino",
+    "password": "$2a$10$QONU4LXqeVOnBxFdP4GQ6eVEDwCZ3tX8zW/kTIg0/GhiqVgY68KAC",
+    "apodo": "Marto",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 6,
+    "tipo": "DT",
+    "nombre": "Nicolas",
+    "apellido": "Calviño",
+    "equipo": "Mi Vecino es Policia",
+    "password": "$2a$10$GpY.sdBomAbcx79bQtXkDuPmAnC.h70QE4hMRuhRJI8ujEH1SyO3i",
+    "apodo": "Bis",
+    "escudo": "1710879835404_img_.png"
+  },
+  {
+    "id": 7,
+    "tipo": "DT",
+    "nombre": "Matias",
+    "apellido": "Abuin",
+    "equipo": "REAL INVIDIO",
+    "password": "$2a$10$XEPr2o38xdBpI7Uu7lg5rONAlm6K7sTG8KJj04hZjAC6VtYnUY9Rm",
+    "apodo": "Perro",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 8,
+    "tipo": "DT",
+    "nombre": "Afonso",
+    "apellido": "Campana",
+    "equipo": "Dos Lugares",
+    "password": "$2a$10$WbwTf0b5imjRaKZf0FbUg.THb5zSiegM4WkL7uYw7lhFx6KG.jkUe",
+    "apodo": "Afo",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 9,
+    "tipo": "DT",
+    "nombre": "Marcos Andres",
+    "apellido": "Cascante",
+    "equipo": "Antimoran -33",
+    "password": "$2a$10$8mzSMr/4oaYZEgKOW5.qveVDzaSSOJ3XTE0xxqoK/999xfoujX1Wq",
+    "apodo": "Cuda",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 10,
+    "tipo": "DT",
+    "nombre": "Matias",
+    "apellido": "Moran",
+    "equipo": "Buchardo FC",
+    "password": "$2a$10$fQFgPdPXPNr3VNc9lMqYdebsMkKoG.BSJzs0Av2s0USzZJyuHP.p2",
+    "apodo": "MM",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 11,
+    "tipo": "DT",
+    "nombre": "Agustin Roberto",
+    "apellido": "Kayat",
+    "equipo": "Julián Álvarez Sobrevalorado",
+    "password": "$2a$10$1loYjKQnM3kI9.h84D7s1.6H4ipvaCyE903pyrknKmdlhXUiPuNqi",
+    "apodo": "Tanque",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 12,
+    "tipo": "DT",
+    "nombre": "Lucas",
+    "apellido": "Bett",
+    "equipo": "AVERGA",
+    "password": "$2a$10$X4.oqilg9j3txLF7tkKFj.jXn4dVDQSQIFKDJRfeP3sDSGUp551eO",
+    "apodo": "Beto",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 13,
+    "tipo": "DT",
+    "nombre": "Francisco",
+    "apellido": "Tavella",
+    "equipo": "EUD",
+    "password": "$2a$10$RzySrCMrmuPWD3aN.dajZ.QddSfHZYggK9tLD6kPjGhWGtyAa1KOO",
+    "apodo": "Franki",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 14,
+    "tipo": "DT",
+    "nombre": "Nicolas Guillermo",
+    "apellido": "Carstens",
+    "equipo": "Defeee Fc",
+    "password": "$2a$10$dlywEnfs4IYX0EqE/bEmMO2YReeiAbr6A.xUhSTuC7bTd.0evbTha",
+    "apodo": "Cars",
+    "escudo": "escudoGDT.png"
+  },
+  {
+    "id": 15,
+    "tipo": "DT",
+    "nombre": "Dani",
+    "apellido": "Avellaneda",
+    "equipo": "LOS RECOMENDADOS DE DANI",
+    "password": "$2a$10$C7VsB6blXTdVz.scEDi0JusOnTfBv7BfiPM2AbbZDJbawBa/uIsAa",
+    "apodo": "Dani A",
+    "escudo": "escudoGDT.png"
+  }
+]

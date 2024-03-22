@@ -1,0 +1,17 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesLogin.css", titulo:"HORARIOS FECHA " + nroFecha }) %>
+<main>
+    <div>
+        <form action="/lpf/week/<%= nroFecha %>" method="POST" id="create">
+            <% for (let i = 1;i<= 28;i++){ %>
+                <div>
+                    <input type="text" name="local<%= i %>">
+                    <input type="text" name="visitante<%= i %>">
+                    <input type="date" name="dia<%= i %>">
+                    <input type="time"  name="hora<%= i %>">
+                </div>
+            <% } %>
+            <input type="submit" value="CONFIRMAR">
+        </form>
+    </div>
+</main>
+<%- include('../partials/footer') %>

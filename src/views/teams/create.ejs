@@ -1,0 +1,125 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesCreateTeam.css", titulo:"CARGAR EQUIPO"}) %>
+<main>
+    <% if (locals.dt){ %> 
+        <form action="/teams/finalUpload" method="POST" id="create">
+    <% } else { %>
+        <form action="/teams/firstUpload" method="POST" id="create">
+    <% } %>
+        <% if (locals.dt){ %>
+            <div class="bloque-dt">
+                <img src="/img/escudos/<%= locals.dt.escudo %>" alt="Escudo DT" class="dt-escudo">
+                <h3 class="titulo-seccion"><%= locals.dt.apodo %> - <%= locals.dt.equipo %></h3>
+                <select class="campo-oculto" name="dtEquipo" id="dt">
+                    <option value="<%= locals.dt.apodo %>" selected></option>
+                </select>
+            </div>
+        <% } else { %>
+            <div class="bloque-dt dt-seleccion">
+                <h3 class="titulo-seccion">ELEGIR DT</h3>
+                <select class="campoInformacion" name="dtEquipo" id="dt">
+                    <option value="" selected>ELEGIR</option>
+                    <% dtsPendientes.forEach(dt=>{ %>
+                        <% if(locals.oldInfo && locals.oldInfo.dtEquipo){ %>
+                            <% if(locals.oldInfo.dtEquipo == dt){ %>
+                                <option value="<%= dt %>" selected><%= dt %></option>
+                            <% } else { %>
+                                <option value="<%= dt %>"><%= dt %></option>
+                            <% } %>
+                        <% } else { %>
+                            <option value="<%= dt %>"><%= dt %></option>
+                        <% } %>
+                    <% }) %>
+                </select>
+                <% if(locals.errores && locals.errores.dtEquipo){ %>
+                    <span class="feedback"><%= errores.dtEquipo.msg %></span>
+                <% } %>
+            </div>
+        <% } %>
+
+        <div class="bloque-jugadores">
+            <div class="tituloTitulares">
+                <h3 class="titulo-seccion">TITULARES</h3>
+                <% if(locals.errores && locals.errores.capitan){ %>
+                    <span class="feedback"><%= errores.capitan.msg %></span>
+                <% } %>
+                <% if(locals.errores && locals.errores.dtRepetido){ %>
+                    <span class="feedback"><%= errores.dtRepetido.msg %></span>
+                <% } %>
+            </div>
+            <ul class="listaTitulares">
+                <li class="titulos">
+                    <div class="infoBasica">
+                        <label class="prefijo-id">ID</label>
+                    </div>
+                    <% if(locals.dt){ %>
+                        <div class="infoExtraJugador">
+                            <div class="nombreJugador">JUGADOR</div>
+                            <div class="posJugador">POS</div>
+                            <div class="equipoJugador">EQUIPO</div>
+                            <div class="capitan">CAP</div>
+                        </div>
+                    <% } %>
+                </li>
+                <% for (let i = 1; i<=11;i++){ %>
+                    <% if(locals.dt){ %>
+                        <li class="<%= titulares[i-1].pos %>">
+                            <div class="infoBasica">
+                                <label class="id-jugador"><%= titulares[i-1].id %></label>
+                                <input type="text" class="campo-oculto" name="tit<%= i %>" value="<%= titulares[i-1].id.replace('J','') %>"  >
+                            </div>
+                            <div class="infoExtraJugador">
+                                <div class="nombreJugador"><%= titulares[i-1].jugador %></div>
+                                <div class="posJugador"><%= titulares[i-1].pos %></div>
+                                <div class="equipoJugador"><%= titulares[i-1].equipo %></div>
+                                <input type="radio" class="capitan" name="capitan" value="<%= titulares[i-1].id %>">
+                            </div>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <div class="infoBasica">
+                                <label class="prefijo-id">J</label>
+                                <input type="text" class="idJugador" name="tit<%= i %>" maxlength="4" value="<%= locals.oldInfo && locals.oldInfo['tit' + i] ? locals.oldInfo['tit' + i ] : '' %>" >
+                            </div>
+                            <% if(locals.errores && locals.errores["tit" + i]){ %>
+                                <span class="feedback"><%= errores["tit" + i].msg %></span>
+                            <% } %>
+                        </li>
+                    <% } %>    
+                <% } %>
+            </ul>
+            <h3 class="titulo-seccion">SUPLENTES</h3>
+            <ul class="listaSuplentes">
+                <% for (let i = 1; i<=4;i++){ %>
+                    <% if(locals.dt){ %>
+                        <li class="<%= suplentes[i-1].pos %>">
+                            <div class="infoBasica">
+                                <label class="id-jugador"><%= suplentes[i-1].id %></label>
+                                <input type="text" class="campo-oculto" name="sup<%= i %>" value="<%= suplentes[i-1].id.replace('J','') %>" >
+                            </div>
+                            <div class="infoExtraJugador">
+                                <div class="nombreJugador"><%= suplentes[i-1].jugador %></div>
+                                <div class="posJugador"><%= suplentes[i-1].pos %></div>
+                                <div class="equipoJugador"><%= suplentes[i-1].equipo %></div>
+                                <div class="capitan"></div>
+                            </div>
+                        </li>
+                    <% } else { %>
+                        <li>
+                            <div class="infoBasica">
+                                <label class="prefijo-id">J</label>
+                                <input type="text" class="idJugador" name="sup<%= i %>" maxlength="4" value="<%= locals.oldInfo && locals.oldInfo['sup' + i] ? locals.oldInfo['sup' +  i ] : '' %>" >
+                            </div>
+                            <% if(locals.errores && locals.errores["sup" + i]){ %>
+                                <span class="feedback"><%= errores["sup" + i].msg %></span>
+                            <% } %>
+                        </li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+        <div class="bloque-botones">
+            <input type="submit" class="boton" value="CONTINUAR">
+        </div>
+    </form>
+</main>
+<%- include('../partials/footer') %>

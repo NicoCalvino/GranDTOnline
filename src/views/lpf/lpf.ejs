@@ -1,0 +1,12 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesViewTeam.css", titulo:"FECHAS LPF"}) %>
+<main>
+    <div class="bloque-dt">
+        <ul>
+            <% console.log(infoTorneo.fechaFinal) %>
+            <% for(let i = Number(infoTorneo.fechaInicio);i <= Number(infoTorneo.fechaFinal);i++){ %>
+                <li><a href="/lpf/week/<%= i %>"><%= i < Number(infoTorneo.fechaActual) ? i + ' - JUGADO' : i %></a></li>
+            <% } %>
+        </ul>
+    </div>
+</main>
+<%- include('../partials/footer') %>

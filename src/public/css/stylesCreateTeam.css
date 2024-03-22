@@ -1,0 +1,173 @@
+main{
+    width: 70%;
+    margin: auto;
+}
+
+h3.titulo-seccion{
+    font-size: 25px;
+}
+
+div.bloque-dt{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px;
+}
+
+div.dt-seleccion{
+    height: 50px;
+}
+
+div.bloque-dt select{
+    border-radius: 10px;
+    width:20%;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.campo-oculto{
+    display:none
+}
+
+div.bloque-dt .escudo-equipo{
+    width:40%;
+    text-align: center;
+}
+
+div.bloque-dt img{
+    width:10%;
+    height: 100%;
+    object-fit:contain;
+}
+
+div.bloque-jugadores h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.bloque-jugadores li{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+
+div.bloque-jugadores li .infoBasica{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+div.bloque-jugadores li.titulos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+div.bloque-jugadores li.titulos {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.bloque-jugadores li.titulos .prefijo-id{
+    width: 100px;
+}
+
+div.bloque-jugadores .prefijo-id{
+    width:20px;
+    display: block;
+}
+
+div.bloque-jugadores .id-jugador{
+    width:100px;
+    display: block;
+    text-align: center;
+}
+
+div.bloque-jugadores input{
+    font-size: 25px;
+    line-height: 32px;
+    width:80px;
+    border-radius: 8px;
+    margin-top: 3px;
+    text-align: center;
+}
+
+div.bloque-jugadores .infoExtraJugador{
+    display:flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 5px;
+}
+
+div.bloque-jugadores .ARQ{
+    background-color: rgba(248,203,173,1);
+    border-radius: 10px;
+}
+
+div.bloque-jugadores .DEF{
+    background-color: rgba(255,242,204,1);
+    border-radius: 10px;
+}
+
+div.bloque-jugadores .VOL{
+    background-color: rgba(217,225,242,1);
+    border-radius: 10px;
+}
+
+div.bloque-jugadores .DEL{
+    background-color: rgba(255,184,167,1);
+    border-radius: 10px;
+}
+
+div.bloque-jugadores .XXX{
+    background-color: rgb(77, 77, 77);
+    border-radius: 10px;
+    color:aliceblue
+}
+
+div.bloque-jugadores .infoExtraJugador .nombreJugador{
+    width: 50%;
+}
+
+div.bloque-jugadores .infoExtraJugador .posJugador{
+    width: 10%;
+    text-align: center;
+}
+
+div.bloque-jugadores .infoExtraJugador .equipoJugador{
+    width: 30%;
+}
+
+div.bloque-jugadores .infoExtraJugador .capitan{
+    width: 5%;
+}
+
+form .bloque-botones{
+    margin-top: 30px;
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+
+form .boton{
+    background-color: rgb(30, 116, 24);
+    color:rgb(255,255,255);
+    width:60%;
+    font-size: 30px;
+    line-height: 40px;
+    border-radius: 10px;
+}
+
+span.feedback{
+    font-size: 15px;
+    color:red;
+    font-weight: bold;
+}

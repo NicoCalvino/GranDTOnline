@@ -1,0 +1,35 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesRegister.css", titulo:"NUEVO DT"}) %>
+<main>
+    <form action="/users/create" method="POST" enctype="multipart/form-data" id="create">
+        <h3 class="titulo-seccion">NUEVO DT</h3>
+        <div class="info-personal">
+            <% if(locals.errores && locals.errores.nombre){ %>
+                <p class="feedback"><%= errores.nombre.msg %></p>
+            <% } %>
+            <input type="nombre" name="nombre" id="nombre" placeholder="Nombre" <%= locals.oldInfo && locals.oldInfo.nombre ? "value=" + oldInfo.nombre : '' %>>
+            <% if(locals.errores && locals.errores.apellido){ %>
+                <p class="feedback"><%= errores.apellido.msg %></p>
+            <% } %>
+            <input type="apellido" name="apellido" id="apellido" placeholder="Apellido" <%= locals.oldInfo && locals.oldInfo.apellido ? "value=" + oldInfo.apellido : '' %>>
+            <% if(locals.errores && locals.errores.apodo){ %>
+                <p class="feedback"><%= errores.apodo.msg %></p>
+            <% } %>
+            <input type="apodo" name="apodo" id="apodo" placeholder="Apodo" <%= locals.oldInfo && locals.oldInfo.apodo ? "value=" + oldInfo.apodo : '' %>>
+            <% if(locals.errores && locals.errores.equipo){ %>
+                <p class="feedback"><%=errores.equipo.msg %></p>
+            <% } %>
+            <input type="text" name="equipo" id="equipo" placeholder="Nombre Equipo" <%= locals.oldInfo && locals.oldInfo.equipo ? "value=" + oldInfo.equipo : '' %>>
+            <% if(locals.errores && locals.errores.escudo){ %>
+                <p class="feedback"><%=errores.escudo.msg %></p>
+            <% } %>
+            <div class="escudo">
+                <p>ELEGIR ESCUDO</p>
+                <input type="file" name="escudo" id="escudo">
+            </div>
+        </div>
+        <div class="botones">
+            <input type="submit" value="CREAR">
+        </div>
+    </form>
+</main>
+<%- include('../partials/footer') %>

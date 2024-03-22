@@ -1,0 +1,73 @@
+main{
+    width:80%;
+    margin:10px auto
+}
+
+form h3{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+form div.info-personal {
+    margin:auto;
+    width:80%;
+    border: 3px solid rgb(30, 116, 24);
+    border-radius: 20px;
+    padding: 20px
+}
+
+form div.info-personal input{
+    display:flex;
+    margin:auto;
+    margin-bottom: 8px;
+    width:90%;
+    font-size:20px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+form .feedback{
+    color:rgb(255,0,0);
+    font-weight:bold;
+    font-size: 20px;
+    width:90%;
+    margin:auto;
+}
+
+form div.info-personal .escudo{
+    font-weight: bold;
+    display:flex;
+    align-items: center;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:90%;
+    font-size:20px;
+    padding: 5px;
+}
+
+form div.info-personal .escudo input{
+    width:70%
+}
+
+form div.botones{
+    display:flex;
+    align-items: center;
+}
+
+form div.botones{
+    width: 50%;
+    margin:auto;
+    margin-top: 30px;
+}
+
+form div.botones input{
+    width:50%;
+    margin:auto;
+    font-size:20px;
+    border-radius: 10px;
+    padding: 5px;
+    color:rgb(255,255,255);
+    background-color: rgb(30, 116, 24);
+}

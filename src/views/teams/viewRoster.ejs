@@ -1,0 +1,43 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesViewTeam.css", titulo:"EQUIPO " + dt.apodo}) %>
+<main>
+    <div class="bloque-dt">
+        <img src="/img/escudos/<%= locals.dt.escudo %>" alt="Escudo DT" class="dt-escudo">
+        <h3 class="titulo-seccion"><%= locals.dt.apodo %> - <%= locals.dt.equipo %></h3>
+    </div>
+    <div class="bloque-jugadores">
+        <h3 class="titulo-seccion">TITULARES</h3>
+        <table>
+            <tr>
+                <% titulos.forEach(titulo => { %>
+                    <th><%= titulo %></th>    
+                <% }) %>
+            </tr>
+            <% titulares.forEach(jugador => { %>
+                <tr class="<%= jugador.pos %>">
+                    <td><%= jugador.id %></td>
+                    <td><%= jugador.jugador %></td>
+                    <% if(jugador.id == capitan.id) { %>
+                        <td>c</td>
+                    <% } else { %>
+                        <td></td>
+                    <% } %>
+                    <td><%= jugador.pos %></td>
+                    <td><%= jugador.equipo %></td>
+                </tr>
+            <% }) %>
+        </table>
+        <h3 class="titulo-seccion">SUPLENTES</h3>
+        <table>
+            <% suplentes.forEach(jugador => { %>
+                <tr>
+                    <td><%= jugador.id %></td>
+                    <td><%= jugador.jugador %></td>
+                    <td></td>
+                    <td><%= jugador.pos %></td>
+                    <td><%= jugador.equipo %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</main>
+<%- include('../partials/footer') %>

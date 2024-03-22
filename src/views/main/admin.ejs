@@ -1,0 +1,20 @@
+<%- include('../partials/header',{hojaDeEstilo:"/css/stylesLogin.css", titulo:infoTorneo.nombre }) %>
+<main>
+    <div class="bloque-config">
+        <a href="/lpf">FECHAS LPF</a>
+    </div>
+    <div class="bloque-Dts">
+        <a href="/users/register">NUEVO DT</a>
+        <a href="/teams/create">Cargar Equipos</a>
+        <ul>
+            <% usuarios.forEach(usuario =>{ %>
+                <li><a href="/teams/view/<%= usuario.apodo %>"><%= usuario.apodo %></a></li>
+            <% }) %>
+        </ul>
+    </div>
+    <div class="bloque-fecha">
+        <a href="/players/weekPlayers">Jugadores de la Fecha</a>
+        <a href="/lpf/week/<%= infoTorneo.fechaActual %>">Horarios de la Fecha</a>
+    </div>
+</main>
+<%- include('../partials/footer') %>

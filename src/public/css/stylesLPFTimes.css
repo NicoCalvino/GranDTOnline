@@ -1,0 +1,75 @@
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:90%;
+    margin: auto;
+}
+
+h2{
+    font-size: 50px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+form{
+    margin-top:10px;
+    padding:15px;
+}
+
+form div.partidos-completo{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+form div.partidos-completo ul{
+    width:50%
+}
+
+form div.partidos-completo ul li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 5px
+}
+
+form div.partidos-completo ul span{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+form div.partidos-completo ul .info-partido {
+    padding: 5px;
+    border-radius: 8px;
+    line-height: 20px;
+    margin:0px 3px 0px
+}
+
+form div.partidos-completo ul .equipo{
+    width: 25%;
+    font-size: 20px;
+
+}
+form div.partidos-completo ul .fecha{
+    width: 20%;
+}
+form div.partidos-completo ul .hora{
+    width: 15%;
+}
+div.bloque-boton{
+    display: flex;
+    justify-content: center;
+}
+
+form input.boton{
+    background-color: rgb(30, 116, 24);
+    color:rgb(255,255,255);
+    width:30%;
+    font-size: 30px;
+    line-height: 40px;
+    border-radius: 10px;
+    margin:auto
+}
